@@ -1,32 +1,32 @@
 const API_URL = 'https://technical-share-20.herokuapp.com/v1';
 const HTTP_METHODS = { GET: 'GET', POST: 'POST', PATCH: 'PATCH', PUT: 'PUT', DELETE: 'DELETE' };
 
-// document.addEventListener("DOMContentLoaded", async () => {
-//   // Lista todas as categorias
-//   console.log('Lista Categorias>>>', await getCategories());
+document.addEventListener("DOMContentLoaded", async () => {
+  // Lista todas as categorias
+  console.log('Lista Categorias>>>', await getCategories());
 
-//   // Pesquisa dentre todas as categorias
-//   console.log('Pesquisa Categoria >>>', await getCategories('end'));
+  // Pesquisa dentre todas as categorias
+  console.log('Pesquisa Categoria >>>', await getCategories('ux'));
 
-//   // Procura uma categoria pelo ID
-//   console.log('Busca Categoria pelo ID >>>', await findCategory(2));
+  // Procura uma categoria pelo ID
+  console.log('Busca Categoria pelo ID >>>', await findCategory(2));
 
-//   // Busca todos os usuários que tem uma categoria, pelo ID
-//   console.log('Retorna Usuários que detém uma categoria, através do ID da Categoria >>>', await findUsersByCategory(2));
+  // Busca todos os usuários que tem uma categoria, pelo ID
+  console.log('Retorna Usuários que detém uma categoria, através do ID da Categoria >>>', await findUsersByCategory(2));
 
-//   // Lista todos os usuários
-//   console.log('Lista Usuários >>>', await getUsers());
+  // Lista todos os usuários
+  console.log('Lista Usuários >>>', await getUsers());
 
-//   // Procura um usuário pelo ID 
-//   console.log('Busca Usuário pelo ID >>>', await findUserById(1));
+  // Procura um usuário pelo ID 
+  console.log('Busca Usuário pelo ID >>>', await findUserById(1));
 
-//   // Cria um usuário e o retorna 
-//   console.log('Cria Usuário, parâmetros: {email: string; name: string; password: string;} >>>', await createUser({
-//     name: 'Afonso2',
-//     email: 'afons2o@gmail.com',
-//     password: '12345678'
-//   }));
-// });
+  // Cria um usuário e o retorna 
+  console.log('Cria Usuário, parâmetros: {email: string; name: string; password: string;} >>>', await createUser({
+    name: 'Afonso2',
+    email: 'afons2o@gmail.com',
+    password: '12345678'
+  }));
+});
 
 function setFetchConfig(method, body) {
   return {

@@ -16,10 +16,13 @@ searchCategory.addEventListener("keypress", function (e) {
       return await getCategories(categoriaProcurada)
         .then((data) => {
           if (data.length > 0) {
-            foundedCategoryID(data[0].id);
+            // para cada categoria encontrada no banco de dados que tenha parte da informação pesquisada
+            data.forEach((option) => {
+              foundedCategoryID(option.id);
+            });
           } else {
             cards.innerHTML = `<div class="search__notFound">
-            <h2>Nenhum mentor dessa categoria foi encontrado. Digite novamente</h2>
+            <h2>Categoria não encontrada. Digite novamente</h2>
           </div>`;
           }
           searchCategory.value = "";
@@ -35,7 +38,13 @@ searchCategory.addEventListener("keypress", function (e) {
 async function foundedCategoryID(categoryID) {
   return await findUsersByCategory(categoryID)
     .then((usersCategory) => {
-      foundedUsers(usersCategory);
+      if (usersCategory.Users.length > 0) {
+        foundedUsers(usersCategory);
+      } else {
+        cards.innerHTML = `<div class="search__notFound">
+        <h2>Nenhum mentor dessa categoria foi encontrado. Digite novamente</h2>
+      </div>`;
+      }
     })
     .catch((error) => {
       console.log(`Error: ${error}`);

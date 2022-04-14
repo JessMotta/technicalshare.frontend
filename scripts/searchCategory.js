@@ -1,31 +1,28 @@
-// inicializa os cards assim que o HTML é carregado
-// document.addEventListener("DOMContentLoaded", () => {
-//   searchCategories();
-// });
-
-// armazena o banco de dados
-// let database = "../database.json";
-
-// let identity;
-
+// elemento de pesquisa no HTML
 let searchCategory = document.getElementById("search-category");
 
 // chamar a função que filtra os mentores conforme categoria quando der enter
 searchCategory.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
-    // console.log(searchCategory.value);
+    // limpa a área dos cards
     cards.innerHTML = "";
     // transforma o valor colocado no input em maiúsculo
     let categoriaProcurada = searchCategory.value;
 
     searchCategories(categoriaProcurada);
 
-    // SUBSTITUIR POR FUNÇÃO QUE ESTÁ LINKADA A CATEGORIA AO MENTOR
-    // inicializar os cards
+    // função para procurar categoria pelo nome
     async function searchCategories(categoriaProcurada) {
       return await getCategories(categoriaProcurada)
         .then((data) => {
-          foundedCategoryID(data[0].id);
+          if (data.length > 0) {
+            foundedCategoryID(data[0].id);
+          } else {
+            cards.innerHTML = `<div class="search__notFound">
+            <h2>Nenhum mentor dessa categoria foi encontrado. Digite novamente</h2>
+          </div>`;
+          }
+          searchCategory.value = "";
         })
         .catch((error) => {
           console.log(`Error: ${error}`);
@@ -34,38 +31,29 @@ searchCategory.addEventListener("keypress", function (e) {
   }
 });
 
-
-
-async function foundedCategoryID(categoryID){
-  // let idCategoria = categoryID[0].id;
-  return await findUsersByCategory(categoryID).then((usersCategory) =>{
-    foundedUsers(usersCategory)
-    console.log(usersCategory)
-  }).catch((error) =>{
-    console.log(`Error: ${error}`);
-  })
+// função para procurar mentores pelo o id da categoria
+async function foundedCategoryID(categoryID) {
+  return await findUsersByCategory(categoryID)
+    .then((usersCategory) => {
+      foundedUsers(usersCategory);
+    })
+    .catch((error) => {
+      console.log(`Error: ${error}`);
+    });
 }
 
-
-
-
-function foundedUsers(usersCategory){
-
-  // console.log(usersCategory)
-  if(usersCategory.length == 0){
-    cards.innerHTML = `<div class="search__notFound">
-        <h2>Nenhum mentor dessa categoria foi encontrado. Digite novamente</h2>
-      </div>`;
-  }else{
-    for (let i = 0; i < usersCategory.Users.length; i++) {
-      createCardFiltered(usersCategory, i);
-      console.log(usersCategory.Users);
-    }
+/* função para criar os cards de acordo com a quantidade de mentores encontrados 
+para determinada categoria */
+function foundedUsers(usersCategory) {
+  for (let i = 0; i < usersCategory.Users.length; i++) {
+    createCardFiltered(usersCategory, i);
+    console.log(usersCategory.Users);
   }
+
   searchCategory.value = "";
-  }
+}
 
-// cria os cards e adiciona a info de cada usuário dentro deles
+// cria os cards e adiciona a info de cada mentor dentro deles
 function createCardFiltered(usersCategory, id) {
   // cria a estrutura do card e adiciona a área de conteúdo (cards)
   card = document.createElement("div");
@@ -89,7 +77,6 @@ function createCardFiltered(usersCategory, id) {
   mentorName.textContent = usersCategory.Users[id].name;
   cardBody.appendChild(mentorName);
 
-
   // adiciona a category (área de interesse)
   category = document.createElement("p");
   category.setAttribute("class", "card__category");
@@ -107,5 +94,3 @@ function createCardFiltered(usersCategory, id) {
   });
   cardBody.appendChild(buttonProfile);
 }
-
-

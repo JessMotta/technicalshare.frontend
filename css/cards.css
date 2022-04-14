@@ -1,6 +1,7 @@
 .card {
   background-color: var(--color-white);
   width: 234px;
+  /* max-width: fit-content; */
   height: 110px;
   display: flex;
   justify-content: center;
@@ -8,18 +9,19 @@
   border-radius: 5px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   margin-top: 1rem;
+  word-break: break-word;
 }
 
 .card__image {
   width: 73px;
   height: 73px;
   border-radius: 50%;
-  padding: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.2rem;
 }
 
 .card__info {
   width: 130px;
-  padding-right: 0.5rem;
+  margin-right: 0.2rem;
 }
 
 .card__title {

@@ -23,7 +23,6 @@ async function initializeCards() {
   return await getUsers()
     .then((data) => {
       showMentors(data);
-      console.log(data);
     })
     .catch((error) => {
       console.log(`Error: ${error}`);

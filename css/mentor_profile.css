@@ -4,6 +4,7 @@
 @import url("./schedule.css");
 @import url("./calendar.css");
 @import url("./footer.css");
+@import url("./confirmation.css");
 
 hr {
   background-color: var(--color-grey);

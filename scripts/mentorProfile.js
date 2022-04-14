@@ -20,21 +20,21 @@ let mentorPlatform;
 let mentorDate;
 let mentorTime;
 
-let platforms= document.querySelector(".platforms")
-let schedules = document.querySelector(".schedules__options")
+let appointmentButton = document.getElementById("appointment");
 
-let appointmentButton = document.getElementById("appointment")
 
-// console.log(calendarControl.selectDate())
+let platforms = document.querySelectorAll("input[name='platform-option']");
+let schedules = document.querySelectorAll("input[name='schedule-option']");
+
 
 // inicializar as informações do mentor de acordo com o id
 async function initializeInfo() {
   return await findUserById(idMentor)
     .then((dataMentors) => {
       showInfo(dataMentors);
-      appointmentButton.addEventListener("click", function(){
-        showConfirmation(dataMentors)
-      })
+      appointmentButton.addEventListener("click", function () {
+        showConfirmation(dataMentors);
+      });
     })
     .catch((error) => {
       console.log(`Error: ${error}`);
@@ -102,21 +102,19 @@ function showInfo(dataMentors) {
   }
 }
 
-
-
-function showConfirmation(dataMentors){
+function showConfirmation(dataMentors) {
   let mentor_content = document.querySelector(".mentor__content");
-  // let conf_mentorName = document.getElementById("conf-mentorName");
-  // let conf_category = document.getElementById("conf-category");
-  // let conf__plataform = document.getElementById("conf-plataform");
-  // let conf_time = document.getElementById("conf-time");
-  // let conf__date = document.getElementById("conf-date");
 
   mentor_content.innerHTML = "";
 
   content = document.createElement("div");
   content.setAttribute("class", "card confirmation__card");
   mentor_content.appendChild(content);
+
+  confirmationTitle = document.createElement("h1")
+  confirmationTitle.setAttribute("class", "confirmation__title")
+  confirmationTitle.textContent = "Agendamento cadastrado com sucesso! Tira um print, para não esquecer!"
+  content.appendChild(confirmationTitle)
 
   mentorTitle = document.createElement("h2");
   mentorTitle.setAttribute("class", "confirmation__subtitle");
@@ -133,15 +131,22 @@ function showConfirmation(dataMentors){
     content.appendChild(mentorCategory2);
   }
 
-  
-  mentorPlatform = document.createElement("h3");
-  mentorPlatform.textContent = platforms.platform-Option.value
-  content.appendChild(mentorPlatform);
+  for (let i = 0; i < platforms.length; i++) {
+    if (platforms[i].checked) {
+      mentorPlatform = document.createElement("h3");
+      mentorPlatform.textContent = platforms[i].value;
+      content.appendChild(mentorPlatform);
+    }
+  }
 
   mentorDate = document.createElement("h3");
   content.appendChild(mentorDate);
 
-  mentorTime = document.createElement("h3");
-  mentorTime.textContent = schedules.schedule-Option.value
-  content.appendChild(mentorTime);
+  for (i = 0; i < schedules.length; i++) {
+    if (schedules[i].checked) {
+      mentorTime = document.createElement("h3");
+      mentorTime.textContent = schedules[i].value;
+      content.appendChild(mentorTime);
+    }
+  }
 }

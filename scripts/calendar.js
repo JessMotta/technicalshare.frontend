@@ -20,7 +20,7 @@ function CalendarControl() {
       "Set",
       "Out",
       "Nov",
-      "Dez"
+      "Dez",
     ],
     daysInMonth: function (month, year) {
       return new Date(year, month, 0).getDate();
@@ -71,7 +71,7 @@ function CalendarControl() {
       monthLabel.innerHTML = calendarControl.calMonthName[calendar.getMonth()];
     },
     selectDate: function (e) {
-      return(
+      console.log(
         `${e.target.textContent} ${
           calendarControl.calMonthName[calendar.getMonth()]
         } ${calendar.getFullYear()}`
@@ -112,7 +112,8 @@ function CalendarControl() {
       let count = 1;
       let prevDateCount = 0;
 
-      calendarControl.prevMonthLastDate = calendarControl.getPreviousMonthLastDate();
+      calendarControl.prevMonthLastDate =
+        calendarControl.getPreviousMonthLastDate();
       let prevMonthDatesArray = [];
       let calendarDays = calendarControl.daysInMonth(
         calendar.getMonth() + 1,
@@ -157,11 +158,11 @@ function CalendarControl() {
         calendarControl.navigateToCurrentMonth
       );
       for (var i = 0; i < dateNumber.length; i++) {
-          dateNumber[i].addEventListener(
-            "click",
-            calendarControl.selectDate,
-            false
-          );
+        dateNumber[i].addEventListener(
+          "click",
+          calendarControl.selectDate,
+          false
+        );
       }
     },
     highlightToday: function () {
@@ -179,34 +180,36 @@ function CalendarControl() {
           [calendar.getDate() - 1].classList.add("calendar-today");
       }
     },
-    plotPrevMonthDates: function(dates){
+    plotPrevMonthDates: function (dates) {
       dates.reverse();
-      for(let i=0;i<dates.length;i++) {
-          if(document.querySelectorAll(".prev-dates")) {
-              document.querySelectorAll(".prev-dates")[i].textContent = dates[i];
-          }
+      for (let i = 0; i < dates.length; i++) {
+        if (document.querySelectorAll(".prev-dates")) {
+          document.querySelectorAll(".prev-dates")[i].textContent = dates[i];
+        }
       }
     },
-    plotNextMonthDates: function(){
-     let childElemCount = document.querySelector('.calendar-body').childElementCount;
-     //7 lines
-     if(childElemCount > 42 ) {
-         let diff = 49 - childElemCount;
-         calendarControl.loopThroughNextDays(diff);
-     }
+    plotNextMonthDates: function () {
+      let childElemCount =
+        document.querySelector(".calendar-body").childElementCount;
+      //7 lines
+      if (childElemCount > 42) {
+        let diff = 49 - childElemCount;
+        calendarControl.loopThroughNextDays(diff);
+      }
 
-     //6 lines
-     if(childElemCount > 35 && childElemCount <= 42 ) {
-      let diff = 42 - childElemCount;
-      calendarControl.loopThroughNextDays(42 - childElemCount);
-     }
-
+      //6 lines
+      if (childElemCount > 35 && childElemCount <= 42) {
+        let diff = 42 - childElemCount;
+        calendarControl.loopThroughNextDays(42 - childElemCount);
+      }
     },
-    loopThroughNextDays: function(count) {
-      if(count > 0) {
-          for(let i=1;i<=count;i++) {
-              document.querySelector('.calendar-body').innerHTML += `<div class="next-dates">${i}</div>`;
-          }
+    loopThroughNextDays: function (count) {
+      if (count > 0) {
+        for (let i = 1; i <= count; i++) {
+          document.querySelector(
+            ".calendar-body"
+          ).innerHTML += `<div class="next-dates">${i}</div>`;
+        }
       }
     },
     attachEventsOnNextPrev: function () {
@@ -217,7 +220,7 @@ function CalendarControl() {
       calendarControl.plotSelectors();
       calendarControl.plotDates();
       calendarControl.attachEvents();
-    }
+    },
   };
   calendarControl.init();
 }

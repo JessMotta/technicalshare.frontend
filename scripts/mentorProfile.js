@@ -1,5 +1,3 @@
-// import {calendarControl} from "./calendar"
-
 // inicializa os cards assim que o HTML é carregado
 document.addEventListener("DOMContentLoaded", () => {
   initializeInfo();
@@ -102,6 +100,7 @@ function showInfo(dataMentors) {
   }
 }
 
+// mostrar o card confirmando a mentoria com todas as informações
 function showConfirmation(dataMentors) {
   let mentor_content = document.querySelector(".mentor__content");
 
@@ -153,4 +152,6 @@ function showConfirmation(dataMentors) {
       content.appendChild(mentorTime);
     }
   }
+
+  appointmentButton.style.display = "none"
 }

@@ -85,19 +85,19 @@
                    
                         <h2 class="scheduling__title">Plataformas e Horários</h2>
                         <div class="scheduling__structure">
-                            <div class="plataforms">
+                            <div class="platforms">
     
                                 <div class="form-group">
-                                    <input class="radio" name="plataform-option" id="radio-discord" type='radio' checked />
-                                    <label for="radio-discord"><img class="plataforms__image"
+                                    <input class="radio" name="platform-option" id="radio-discord" type='radio' value="discord" checked />
+                                    <label for="radio-discord"><img class="platforms__image"
                                             src="../assets/icons/discord.svg" alt="plataforma discord"></label>
                                 </div>
     
     
     
                                 <div class="form-group">
-                                    <input class="radio" name="plataform-option" id="radio-zoom" type='radio' />
-                                    <label for="radio-zoom"><img class="plataforms__image" src="../assets/icons/zoom.svg"
+                                    <input class="radio" name="platform-option" id="radio-zoom" type='radio' value="zoom" />
+                                    <label for="radio-zoom"><img class="platforms__image" src="../assets/icons/zoom.svg"
                                             alt="plataforma zoom"></label>
                                 </div>
     
@@ -107,7 +107,7 @@
     
                                 <div class="schedules__options">
                                     <div class="form-group">
-                                        <input class="radio" name="schedule-option" id="radio-time1" type='radio' />
+                                        <input class="radio" name="schedule-option" id="radio-time1" type='radio' value="08h às 09h" />
                                         <label for="radio-time1">
                                             <h3>08h às 09h</h3>
                                         </label>
@@ -163,7 +163,7 @@
 
         </section>
         <div class="mentor__button">
-            <a class="button__cta" href="#">Marcar</a>
+            <button id="appointment" class="button__cta">Marcar</button>
         </div>
 
     </main>

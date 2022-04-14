@@ -2,6 +2,7 @@
 @import url("header.css");
 @import url("buttons.css");
 @import url("cards.css");
+@import url(confirmation.css);
 @import url("inputs.css");
 @import url("footer.css");
 
@@ -91,19 +92,7 @@
 }
 
 
-.confRegister__card{
-  margin: 5rem auto;
-  flex-direction: column;
-  padding: 2rem;
-}
 
-.confRegister__title{
-  font-weight: bold;
-  color: var(--color-purple);
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
 @media screen and (min-width: 768px) {
   .register {
@@ -122,9 +111,6 @@
     width: 30vw;
   }
 
-  .confRegister__card{
-    padding: 5rem;
-  }
 }
 
 
@@ -147,9 +133,7 @@
     width: 20vw;
   }
 
-  .confRegister__title{
-    font-size: 1.5rem;
-  }
+ 
  
 }
 

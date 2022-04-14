@@ -71,7 +71,7 @@ function CalendarControl() {
       monthLabel.innerHTML = calendarControl.calMonthName[calendar.getMonth()];
     },
     selectDate: function (e) {
-      console.log(
+      return(
         `${e.target.textContent} ${
           calendarControl.calMonthName[calendar.getMonth()]
         } ${calendar.getFullYear()}`

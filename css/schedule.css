@@ -11,20 +11,20 @@
   margin: 2rem 1rem 1rem 1rem;
 }
 
-.plataforms {
+.platforms {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 }
 
-.plataforms__options {
+.platforms__options {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.plataforms__image {
+.platforms__image {
   width: 70px;
 }
 
@@ -62,7 +62,7 @@
     justify-content: space-around;
   }
 
-  .plataforms__image {
+  .platforms__image {
     width: 80px;
   }
 

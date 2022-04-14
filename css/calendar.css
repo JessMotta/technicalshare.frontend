@@ -4,15 +4,15 @@
 
 .calendar {
   position: relative;
-  max-width: 400px; 
-  min-width: 250px;
+  max-width: 250px; 
   background: var(--color-grey);
   color: var(--color-black);
-  margin: 1rem 0.5rem 2rem 0.5rem;
+  margin: 1rem auto;
   box-sizing: border-box;
   overflow: hidden;
   font-weight: normal;
   border-radius: var(--calendar-border-radius);
+
 }
 
 .calendar-inner {
@@ -157,5 +157,6 @@
 @media screen and (min-width: 768px) {
   .calendar{
   margin: 1rem auto 2rem auto;
+  max-width: 400px;
   }
 }

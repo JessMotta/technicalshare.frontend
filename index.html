@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="tudo">
 
 <head>
   <meta charset="UTF-8">
@@ -13,31 +13,30 @@
 
 <body>
   <header>
-    <nav>
-      <div class="navbar">
-        <div class="container nav-container">
-          <input class="checkbox" type="checkbox" name="" id="" />
-          <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div>
-          <div class="logo">
-            <h1><img src="./assets/images/logo.png" alt=""></h1>
-          </div>
-          <!-- <div>
-            <a href="#"><img src="./assets/icons/login.svg" alt=""></a>
-          </div> -->
-          <div class="menu-items">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="#">Mentores</a></li>
-            <li><a href="#">Contato</a></li>
-          </div>
-        </div>
+    <nav class="navbar">
+      <div aria-label="Abrir menu" class="navbar__hamburger" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <span class="navbar__hamburger-hbar"></span>
+        <span class="navbar__hamburger-hbar"></span>
+        <span class="navbar__hamburger-hbar"></span>          
       </div>
+      <div>
+        <ul class="navbar__menu">
+          <li id="navbar__menu-itemIMG" class="navbar__menu-item"><a href="#" class="navbar__menu-link">Cadastre-se</a></li>
+          <li id="navbar__menu-itemIMG" class="navbar__menu-item"><a href="#" class="navbar__menu-link">Mentores</a></li>
+          <li id="navbar__menu-itemIMG" class="navbar__menu-item"><a href="#" class="navbar__menu-link">Agendamento</a></li>
+          <li id="navbar__menu-itemIMG" class="navbar__menu-item"><a href="#" class="navbar__menu-link">Contato</a></li>
+          <li id="navbar__menu-itemIMG" class="navbar__menu-item"><a href="#" class="navbar__menu-link">Comunidade</a></li>
+        </ul>
+      </div>
+      <a href="index.html"class="logo__icon"></a>
+      <div class="contraste__btn">
+      </div>
+      <a href="" class="navbar__avatar">
+        <!-- adicionar a ft do perfil no lugar do gatinho -->
+        <img class="navbar__avatar-img"src="http://placekitten.com/100/100" alt="foto do seu avatar">
+      </a>
     </nav>
   </header>
-
   <main>
     <section class="info">
       <div class="search">
@@ -90,7 +89,10 @@
 
 
 
+  <script src="./scripts/script.js"></script>
   <script src="./scripts/api.js"></script>
+  <script src="./js/header-hamburger.js"></script>
+  <script src="./js/contraste-feature.js"></script>
   <script src="./scripts/showMentors.js"></script>
   <script src="./scripts/searchCategory.js"></script>
 </body>

@@ -1,6 +1,7 @@
 @import url("./header.css");
 @import url("./cards.css");
 @import url("./footer.css");
+@import url("./alto-contraste.css");
 
 body {
   font-size: 0.75rem;
@@ -33,20 +34,16 @@ body {
   width: 100%;
   padding: 0.75rem 1rem 0.75rem 3rem;
   border-radius: 5px;
+  background-image: url("../assets/icons/search.svg");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position-x: 13px;
+  background-position-y: 7px;
 }
 
 .search__input::placeholder {
   font-size: 0.875rem;
-  font-weight: 400;
-}
-
-.search__image {
-  background: transparent url("../assets/icons/search.svg") no-repeat;
-  background-size: cover;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-left: 1rem;
-  position: absolute;
+  font-weight: 400; 
 }
 
 .about {
@@ -179,6 +176,7 @@ body {
 
   .search__input {
     padding: 1rem 2rem 1rem 3rem;
+    background-position-y: 10px;
   }
 
   .search__input::placeholder {

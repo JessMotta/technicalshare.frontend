@@ -6,6 +6,10 @@
   --color-black: #000000;
   --color-dark-grey: #565656;
 
+    /* CONTRAST */
+    --contrast-black: #000000;
+    --contrast-yellow: #fff333;
+    --contrast-white: #ffffff;
 
   /* CALENDAR */
   --weekdays-border-bottom-color: #404040;

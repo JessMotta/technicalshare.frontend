@@ -1,0 +1,177 @@
+/* estilos de contraste gerais */
+.alto-contraste,
+.alto-contraste nav,
+.alto-contraste div,
+.alto-contraste li,
+.alto-contraste ol,
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste section,
+.alto-contraste main,
+.alto-contraste aside,
+.alto-contraste article {
+    background: var(--contrast-black);
+    color: var(--contrast-white);
+}
+
+
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste h4,
+.alto-contraste h5,
+.alto-contraste h6,
+.alto-contraste p,
+.alto-contraste label,
+.alto-contraste strong,
+.alto-contraste em,
+.alto-contraste span {
+    color: var(--contrast-white) !important;
+}
+.alto-contraste a{
+    color: var(--contrast-yellow) !important;
+}
+
+.alto-contraste button,
+.alto-contraste input[type=button],
+.alto-contraste input[type=reset],
+.alto-contraste input[type=submit] {
+    background: var(--contrast-black) !important;
+    color: var(--contrast-yellow) !important;
+    border: none;
+}
+
+.alto-contraste img.on-contrast-force-gray {
+    filter: grayscale(100%) contrast(120%);
+}
+
+.alto-contraste img.on-contrast-force-white {
+    filter: brightness(0) invert(1);
+}
+/* _____________ */
+
+/* ajustes espeficicos index*/
+.alto-contraste .contraste__btn{
+    background-image: url(../assets/icons/contrasteYL.png);
+    background-color: var(--contrast-black);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 60px;
+    height: 86px;
+    position: relative;
+    cursor: pointer;
+}
+.alto-contraste .contraste__btn:hover{
+    background-color: var(--color-dark-grey);
+}
+.alto-contraste .logo__icon{
+    background-image: url(../assets/images/logoWT.png);
+    background-repeat: no-repeat;
+    width: 250px;
+}
+.alto-contraste .card{
+    border: 1px solid;
+}
+.alto-contraste .about{
+    border: 1px solid;
+}
+/* _____________ */
+
+/* ajustes espeficicos mentor profile*/
+    .alto-contraste .mentor__evaluation{
+        border: 1px solid var(--contrast-white);
+        border-radius: 5px;
+    }
+    .alto-contraste .star-icon{
+        color: var(--color-orange) !important;
+    }
+    .alto-contraste .zoom__icon{
+        background-image: url(../assets/images/zoomWT.png);
+        background-size: 80px;
+        background-position-x: 56px;
+        background-position-y: 8px;
+        background-repeat: no-repeat;
+    }
+    .alto-contraste .discord__icon{
+        background-image: url(../assets/images/discordWT.png);
+        background-size: 75px;
+        background-position: center;
+        background-position-x: 53px;
+        background-repeat: no-repeat;
+    }
+      .alto-contraste .form-group {
+        width: 206px;
+        height: 55px;
+    }
+    .alto-contraste .radio {
+        cursor: pointer;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--contrast-black);
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+    }
+    .alto-contraste input[type="radio"]{
+        filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+    }
+
+    .alto-contraste .calendar .calendar-inner .calendar-today-date {
+        display: grid;
+        text-align: center;
+        cursor: pointer;
+        margin: 3px 0px;
+        background: var(--contrast-black);
+        padding: 8px 0px;
+        border-radius: 10px;
+        width: 80%;
+        margin: auto;
+    }
+    .alto-contraste .calendar .calendar-inner .calendar-body .prev-dates,
+    .calendar .calendar-inner .calendar-body .next-dates {
+      color: var(--contrast-white);
+    }
+    .alto-contraste .calendar {
+        border: 1px solid var(--contrast-white) ;
+        border-radius: var(--calendar-border-radius);
+    }
+    .alto-contraste .arrow{
+        filter: invert(1);
+    }
+/* _____________ */
+
+/* ajustes especificos register page */
+    .alto-contraste .register__content{
+        border: 1px solid var(--contrast-white) ;
+        margin-top: 2px;
+    }
+    .alto-contraste .register__profile{
+        border: 1px solid var(--contrast-white) ;
+    }
+    .alto-contraste .button__cta{
+        border: 1px solid var(--contrast-white) !important;
+        box-shadow: 0 4px 4px 1px var(--contrast-white);
+    }
+    .alto-contraste .register__info input{
+        background-color: var(--contrast-white);
+        color: var(--contrast-black);
+    }
+    .alto-contraste .register__info input::placeholder{
+        color: var(--color-black);
+    }
+    .alto-contraste #specialty, 
+    .alto-contraste #skill, 
+    .alto-contraste .select::after{
+        background-color: var(--contrast-white);
+        color: var(--color-black);
+    }
+    .alto-contraste .select:hover::after{
+        color: var(--color-orange);
+    }
+/* _____________ */

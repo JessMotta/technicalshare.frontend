@@ -111,11 +111,41 @@ hr {
   margin: 1rem 0 3rem 0;
 }
 
+.zoom__icon{
+  background-image: url(../assets/icons/zoom.svg);
+  background-size: 66px;
+  background-position-x: 41px;
+  background-position-y: 2px;
+  background-repeat: no-repeat;
+}
+.discord__icon{
+  background-image: url(../assets/icons/discord.svg);
+  background-size: 66px;
+  background-position: center;
+  background-position-x: 33px;
+  background-repeat: no-repeat;
+}
+.form-group{
+  width: 120px;
+  height: 40px;
+}
+
 /* TABLET */
 @media screen and (min-width: 768px) {
   .mentor {
     width: 80vw;
     margin: auto;
+  }
+
+
+  .form-group{
+    width: 207px;
+  }
+
+  .mentor__structure{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .mentor__info {
@@ -166,4 +196,9 @@ hr {
     margin: 0;
     width: fit-content;
   }
+  .form-group{
+    width: 206px;
+    height: 40px;
+  }
+
 }

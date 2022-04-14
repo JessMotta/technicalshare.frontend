@@ -40,5 +40,5 @@ register.addEventListener("click", async function () {
 });
 // função que associa o id do usuário ao id da categoria
 async function linkUserToCategory(userID, categoryValue) {
-  console.log(await associateUserToCategory(userID, categoryValue));
+  await associateUserToCategory(userID, categoryValue);
 }

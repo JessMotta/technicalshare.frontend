@@ -10,6 +10,7 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   margin-top: 1rem;
   word-break: break-word;
+  padding: 0.5rem;
 }
 
 .card__image {
@@ -21,7 +22,7 @@
 
 .card__info {
   width: 130px;
-  margin-right: 0.2rem;
+  padding: 0.2rem;
 }
 
 .card__title {
@@ -36,7 +37,7 @@
   padding: 0.5rem 0.25rem;
   border-radius: 5px;
   text-transform: uppercase;
-  width: auto;
+  width: fit-content;
   height: auto;
 }
 
@@ -84,7 +85,6 @@
     padding: 0.5rem 0.25rem;
     border-radius: 5px;
     text-transform: uppercase;
-    width: fit-content;
   }
   
   .card__button {

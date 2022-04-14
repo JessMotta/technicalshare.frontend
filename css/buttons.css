@@ -8,6 +8,11 @@
   text-transform: uppercase;
   font-weight: bold;
   box-shadow: 0 4px 4px 1px #ac360b;
+  cursor: pointer;
+}
+
+.button__cta:hover{
+  background-color: #e63d00;
 }
 
 .form-group {

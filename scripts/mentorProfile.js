@@ -118,15 +118,17 @@ function showConfirmation(dataMentors) {
 
   mentorTitle = document.createElement("h2");
   mentorTitle.setAttribute("class", "confirmation__subtitle");
-  mentorTitle.textContent = dataMentors.name;
+  mentorTitle.textContent = `Mentor: ${dataMentors.name}`;
   content.appendChild(mentorTitle);
 
   mentorCategory = document.createElement("h3");
-  mentorCategory.textContent = dataMentors.Categories[0].name;
+  mentorCategory.setAttribute("class", "confirmation__info")
+  mentorCategory.textContent = `Categoria(s): ${dataMentors.Categories[0].name}`;
   content.appendChild(mentorCategory);
 
   if (dataMentors.Categories.length > 1) {
     mentorCategory2 = document.createElement("h3");
+    mentorCategory2.setAttribute("class", "confirmation__info")
     mentorCategory2.textContent = dataMentors.Categories[1].name;
     content.appendChild(mentorCategory2);
   }
@@ -134,7 +136,8 @@ function showConfirmation(dataMentors) {
   for (let i = 0; i < platforms.length; i++) {
     if (platforms[i].checked) {
       mentorPlatform = document.createElement("h3");
-      mentorPlatform.textContent = platforms[i].value;
+      mentorPlatform.setAttribute("class", "confirmation__info")
+      mentorPlatform.textContent = `Plataforma: ${platforms[i].value}`;
       content.appendChild(mentorPlatform);
     }
   }
@@ -145,7 +148,8 @@ function showConfirmation(dataMentors) {
   for (i = 0; i < schedules.length; i++) {
     if (schedules[i].checked) {
       mentorTime = document.createElement("h3");
-      mentorTime.textContent = schedules[i].value;
+      mentorTime.setAttribute("class", "confirmation__info")
+      mentorTime.textContent = `Horário: ${schedules[i].value}`;
       content.appendChild(mentorTime);
     }
   }

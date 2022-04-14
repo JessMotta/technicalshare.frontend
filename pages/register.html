@@ -55,15 +55,18 @@
 
                 <div class="register__options">
                     <div class="register__specialty">
-                        <div class="select" aria-label="Abrir Menu" aria-controls="Menu de Habilidades" aria-haspopup="true" aria-expanded="false">
-                            <label class="sr-only" for="specialty">Escolha a sua especialidade</label>
-                            <select name="format" id="specialty" required>
+                        <div class="select">
+                            <label class="sr-only" for="category">Escolha a sua especialidade</label>
+                            <select name="format" id="category" required>
                                 <option selected disabled>Especialidade</option>
-                                <option value="ux-design">UX Design</option>
-                                <option value="fullstack">Fullstack</option>
-                                <option value="scrum-master">SCRUM Master</option>
-                                <option value="front-end">Front-end</option>
-                                <option value="back-end">Back-end</option>
+                                <option value="1">UX Researcher</option>
+                                <option value="2">Front End</option>
+                                <option value="3">Back End</option>
+                                <option value="4">DevOps</option>
+                                <option value="5">UX Writer</option>
+                                <option value="6">UX/UI Designer</option>
+                                <option value="7">SEO</option>
+                                
                             </select>
                         </div>
 
@@ -94,7 +97,7 @@
         
         </section>
         <div class="register__button">
-            <input onclick="send()" class="button__cta" type="submit" value="Enviar">
+            <input id="register" class="button__cta" type="button" value="Enviar">
         </div>
 
     </form>

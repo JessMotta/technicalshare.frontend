@@ -51,6 +51,9 @@
 /* _____________ */
 
 /* ajustes espeficicos index*/
+.alto-contraste main{
+    margin-top: .5rem;
+}
 .alto-contraste .contraste__btn{
     background-image: url(../assets/icons/contrasteYL.png);
     background-color: var(--contrast-black);
@@ -75,6 +78,18 @@
 }
 .alto-contraste .about{
     border: 1px solid;
+}
+.alto-contraste .card__button{
+    border: 1px solid var(--contrast-white);
+}
+.alto-contraste .register__button{
+    background-color: var(--contrast-black);
+    border: 1px solid var(--contrast-white);
+    box-shadow: 0 4px 4px 1px var(--contrast-white);
+}
+.alto-contraste .card__category{
+    background-color: var(--contrast-black);
+    border: 1px solid var(--contrast-white);
 }
 /* _____________ */
 
@@ -144,6 +159,12 @@
     .alto-contraste .arrow{
         filter: invert(1);
     }
+    .alto-contraste .mentor__category,
+    .alto-contraste .schedules h3{
+        background-color: var(--contrast-black);
+        border: 1px solid var(--contrast-white);
+    }
+
 /* _____________ */
 
 /* ajustes especificos register page */
@@ -151,10 +172,15 @@
         border: 1px solid var(--contrast-white) ;
         margin-top: 2px;
     }
+    .alto-contraste .register__button.regPage{
+        border: none;
+        box-shadow: none;
+    }
     .alto-contraste .register__profile{
         border: 1px solid var(--contrast-white) ;
     }
     .alto-contraste .button__cta{
+        background-color: var(--contrast-black);
         border: 1px solid var(--contrast-white) !important;
         box-shadow: 0 4px 4px 1px var(--contrast-white);
     }

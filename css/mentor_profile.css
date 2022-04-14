@@ -65,8 +65,8 @@ hr {
 .mentor__waves {
   background: transparent url("../assets/images/waves.png") no-repeat;
   background-size: cover;
+  width: 20px;
   min-height: 60px;
-  height: fit-content;
   float: left;
 }
 

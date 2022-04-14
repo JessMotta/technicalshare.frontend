@@ -47,7 +47,7 @@ function showInfo(dataMentors) {
  
   // PARA CATEGORIA 1
   // mostrar a avaliação da habilidade
-  let rating_1 = dataMentors.Categories[0].UserCategories.rating;
+  const rating_1 = dataMentors.Categories[0].UserCategories.rating;
 
    // para receber a posição correta no array stars
   let evaluation_1 = rating_1 - 1;

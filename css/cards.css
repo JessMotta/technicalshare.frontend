@@ -1,7 +1,6 @@
 .card {
   background-color: var(--color-white);
   width: 234px;
-  /* max-width: fit-content; */
   height: 110px;
   display: flex;
   justify-content: center;

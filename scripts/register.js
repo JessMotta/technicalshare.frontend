@@ -1,7 +1,3 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   initializeForm();
-// });
-
 let mentorName = document.getElementById("name");
 let email = document.getElementById("email");
 

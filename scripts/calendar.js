@@ -71,9 +71,18 @@ function CalendarControl() {
       monthLabel.innerHTML = calendarControl.calMonthName[calendar.getMonth()];
     },
     selectDate: function (e) {
-      const formattedDate = `${e.target.textContent} ${calendarControl.calMonthName[calendar.getMonth()]
-        } ${calendar.getFullYear()}`
+      const formattedDate = `${e.target.textContent} ${
+        calendarControl.calMonthName[calendar.getMonth()]
+      } ${calendar.getFullYear()}`;
 
+      var datas = document.querySelectorAll(".number-item");
+      var classDates = e.target.classList;
+      if (!classDates.contains("calendar-today")) {
+        datas.forEach(function (date) {
+          date.classList.remove("calendar-today");
+        });
+       classDates.add("calendar-today")
+      }
       window.storedCalendarDate = formattedDate;
     },
     plotSelectors: function () {
@@ -136,7 +145,7 @@ function CalendarControl() {
       for (let j = 0; j < prevDateCount + 1; j++) {
         document.querySelector(
           ".calendar .calendar-body"
-        ).innerHTML += `<div class="number-item" data-num=${count}><a class="dateNumber" href="#">${count++}</a></div>`;
+        ).innerHTML += `<div class="number-item" data-num=${count}><a class="dateNumber" href="javascript:void(0)">${count++}</a></div>`;
       }
       calendarControl.highlightToday();
       calendarControl.plotPrevMonthDates(prevMonthDatesArray);
@@ -176,7 +185,7 @@ function CalendarControl() {
       ) {
         document
           .querySelectorAll(".number-item")
-        [calendar.getDate() - 1].classList.add("calendar-today");
+          [calendar.getDate() - 1].classList.add("calendar-today");
       }
     },
     plotPrevMonthDates: function (dates) {

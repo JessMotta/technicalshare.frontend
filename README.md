@@ -40,6 +40,8 @@ suas dúvidas sobre a área ou te orientar no aprendizado de novas habilidades.
 
 Desenvolvido durante o Hackathon do programa de formação da FCamara
 
+### Projeto em produção: https://luanaggoncalves.github.io/technicalshare.frontend/index.html#
+
 ---
 
 ## 🚀 Como executar o projeto

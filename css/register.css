@@ -133,7 +133,10 @@
     width: 20vw;
   }
 
- 
+ main{
+  margin-top: 0.5rem;
+  padding-top: 7rem;
+ }
  
 }
 

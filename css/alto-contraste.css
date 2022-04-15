@@ -191,8 +191,7 @@
     .alto-contraste .register__info input::placeholder{
         color: var(--color-black);
     }
-    .alto-contraste #specialty, 
-    .alto-contraste #skill, 
+    .alto-contraste #category, 
     .alto-contraste .select::after{
         background-color: var(--contrast-white);
         color: var(--color-black);

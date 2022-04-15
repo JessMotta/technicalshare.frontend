@@ -89,6 +89,5 @@ function showMentors(dataMentors) {
 
 // o window.location redirect será substituído por uma rota
 function openProfile() {
-  console.log(identity);
   window.location.href = "./pages/mentor_profile.html?id=" + identity;
 }

@@ -56,7 +56,6 @@ para determinada categoria */
 function foundedUsers(usersCategory) {
   for (let i = 0; i < usersCategory.Users.length; i++) {
     createCardFiltered(usersCategory, i);
-    console.log(usersCategory.Users);
   }
 
   searchCategory.value = "";

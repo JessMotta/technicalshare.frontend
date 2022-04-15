@@ -1,7 +1,3 @@
-//check the console for date click event
-//Fixed day highlight
-//Added previous month and next month view
-
 function CalendarControl() {
   const calendar = new Date();
   const calendarControl = {

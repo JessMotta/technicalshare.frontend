@@ -71,11 +71,10 @@ function CalendarControl() {
       monthLabel.innerHTML = calendarControl.calMonthName[calendar.getMonth()];
     },
     selectDate: function (e) {
-      console.log(
-        `${e.target.textContent} ${
-          calendarControl.calMonthName[calendar.getMonth()]
+      const formattedDate = `${e.target.textContent} ${calendarControl.calMonthName[calendar.getMonth()]
         } ${calendar.getFullYear()}`
-      );
+
+      window.storedCalendarDate = formattedDate;
     },
     plotSelectors: function () {
       document.querySelector(
@@ -177,7 +176,7 @@ function CalendarControl() {
       ) {
         document
           .querySelectorAll(".number-item")
-          [calendar.getDate() - 1].classList.add("calendar-today");
+        [calendar.getDate() - 1].classList.add("calendar-today");
       }
     },
     plotPrevMonthDates: function (dates) {

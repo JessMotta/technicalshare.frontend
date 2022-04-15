@@ -201,3 +201,10 @@
         color: var(--color-orange);
     }
 /* _____________ */
+
+/* ajustes especificos confirmation register */
+.alto-contraste .select{
+    background-color: var(--contrast-white);
+    color: var(--color-black);
+}
+/* _____________ */

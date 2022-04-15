@@ -143,8 +143,7 @@ function showConfirmation(dataMentors) {
 
   mentorDate = document.createElement("h3");
   mentorDate.setAttribute("class", "confirmation__info")
-  mentorDate.textContent = window.storedCalendarDate;
-
+  mentorDate.textContent = `Data: ${window.storedCalendarDate}`;
   content.appendChild(mentorDate);
 
   for (i = 0; i < schedules.length; i++) {

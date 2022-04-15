@@ -75,14 +75,21 @@ function CalendarControl() {
         calendarControl.calMonthName[calendar.getMonth()]
       } ${calendar.getFullYear()}`;
 
+      // para mostrar a nova data selecionada no agendamento
       var datas = document.querySelectorAll(".number-item");
+      let dateSelected = e.target.textContent;
       var classDates = e.target.classList;
       if (!classDates.contains("calendar-today")) {
         datas.forEach(function (date) {
           date.classList.remove("calendar-today");
+          console.log(datas[dateSelected - 1].getAttribute("data-num"));
         });
-       classDates.add("calendar-today")
       }
+      if (dateSelected === datas[dateSelected - 1].getAttribute("data-num")) {
+        datas[dateSelected - 1].classList.add("calendar-today");
+      }
+
+      // armazena data para ser exibida na tela de comprovante
       window.storedCalendarDate = formattedDate;
     },
     plotSelectors: function () {

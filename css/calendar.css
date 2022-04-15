@@ -103,10 +103,13 @@
   font-size: 20px;
 }
 
+
 .calendar .calendar-inner .calendar-body .calendar-today {
   background: var(--color-orange);
   border-radius: 4px;
 }
+
+
 
 .calendar .calendar-inner .calendar-body .calendar-today:hover {
   border: 1px solid transparent;

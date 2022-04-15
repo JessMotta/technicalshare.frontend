@@ -1,8 +1,10 @@
-@import url("base.css");
-@import url("header.css");
-@import url("buttons.css");
-@import url("inputs.css");
-@import url("footer.css");
+@import url("./base.css");
+@import url("./header.css");
+@import url("./buttons.css");
+@import url("./cards.css");
+@import url("./confirmation.css");
+@import url("./inputs.css");
+@import url("./footer.css");
 
 .register {
   background-color: var(--color-white);
@@ -89,6 +91,9 @@
   margin-bottom: 6rem;
 }
 
+
+
+
 @media screen and (min-width: 768px) {
   .register {
     margin: 1.5rem 2rem;
@@ -105,6 +110,7 @@
   .register__profile {
     width: 30vw;
   }
+
 }
 
 
@@ -126,6 +132,8 @@
   .register__profile{
     width: 20vw;
   }
+
+ 
  
 }
 

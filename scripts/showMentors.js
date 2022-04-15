@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCards();
 });
 
-// armazena o banco de dados
-// let database = "../database.json";
 
+// recebe o id do usuário para fazer o redirecionamento de página
 let identity;
 
 // área onde mostrará os cards dos mentores
@@ -52,10 +51,6 @@ function createCard(dataMentors, id) {
   mentorName.setAttribute("class", "card__title");
   mentorName.textContent = dataMentors[id].name;
   cardBody.appendChild(mentorName);
-
-  // let categoryBody = document.createElement("div")
-  // categoryBody.setAttribute("class", "card__category")
-  // cardBody.appendChild(categoryBody)
 
   // // adiciona a category (área de interesse)
   category_1 = document.createElement("p");

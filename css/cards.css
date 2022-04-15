@@ -50,6 +50,10 @@
   padding: 0.25rem 0.5rem;
 }
 
+.card__button:hover{
+  background-color:  #4544a2;
+}
+
 /* DESKTOP */
 @media screen and (min-width:1024px) {
 

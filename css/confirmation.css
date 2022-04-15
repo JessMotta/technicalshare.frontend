@@ -1,0 +1,41 @@
+.confirmation__card {
+  margin: 5rem auto 3rem auto;
+  flex-direction: column;
+  padding: 2rem;
+  height: max-content;
+  text-align: center;
+}
+
+.confirmation__title {
+  font-weight: bold;
+  color: var(--color-purple);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.confirmation__content {
+  width: max-content;
+  margin: 0 auto 2rem auto;
+}
+
+.confirmation__subtitle {
+  font-weight: bold;
+  color: var(--color-orange);
+  margin-bottom: 0.5rem;
+}
+
+.confirmation__info{
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .confirmation__card {
+    padding: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .confirmation__title {
+    font-size: 1.5rem;
+  }
+}

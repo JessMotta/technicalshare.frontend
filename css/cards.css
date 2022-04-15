@@ -8,18 +8,20 @@
   border-radius: 5px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   margin-top: 1rem;
+  word-break: break-word;
+  padding: 0.5rem;
 }
 
 .card__image {
   width: 73px;
   height: 73px;
   border-radius: 50%;
-  padding: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.2rem;
 }
 
 .card__info {
   width: 130px;
-  padding-right: 0.5rem;
+  padding: 0.2rem;
 }
 
 .card__title {
@@ -81,7 +83,32 @@
     border-radius: 5px;
     padding: 0.25rem 0.5rem;
   }
-  .card__info{
+}
+  /* DESKTOP */
+  @media screen and (min-width:1024px) {
+    .card{
+      width: 350px;
+      height: fit-content;
+    }
+  
+    .card__image{
+      width: 150px;
+      height: 150px;
+    }
+  
+    .card__title{
+      font-size: 1.5rem;
+    }
+  
+    .card__category{
+      font-size: 1rem;
+    }
+  
+    .card__button{
+      font-size: 1rem;
+    }
+    .card__info{
     width: fit-content;
+
   }
 }

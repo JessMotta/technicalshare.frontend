@@ -56,32 +56,22 @@
                 <div class="register__options">
                     <div class="register__specialty">
                         <div class="select">
-                            <label class="sr-only" for="specialty">Escolha a sua especialidade</label>
-                            <select name="format" id="specialty" required>
+                            <label class="sr-only" for="category">Escolha a sua especialidade</label>
+                            <select name="format" id="category" required>
                                 <option selected disabled>Especialidade</option>
-                                <option value="ux-design">UX Design</option>
-                                <option value="fullstack">Fullstack</option>
-                                <option value="scrum-master">SCRUM Master</option>
-                                <option value="front-end">Front-end</option>
-                                <option value="back-end">Back-end</option>
+                                <option value="1">UX Researcher</option>
+                                <option value="2">Front End</option>
+                                <option value="3">Back End</option>
+                                <option value="4">DevOps</option>
+                                <option value="5">UX Writer</option>
+                                <option value="6">UX/UI Designer</option>
+                                <option value="7">SEO</option>
+                                
                             </select>
                         </div>
 
                     </div>
 
-                    <div class="register__specialty">
-                        <div class="select">
-                            <label class="sr-only" for="skill">Escolha um de suas habilidades</label>
-                            <select name="format" id="skill" required>
-                                <option selected disabled>Habilidade</option>
-                                <option value="ux-research">UX Research</option>
-                                <option value="ux-writing">UX Writing</option>
-                                <option value="html">HTML</option>
-                                <option value="javascript">JavaScript</option>
-                                <option value="node-js">Node.js</option>
-                            </select>
-                        </div>
-                    </div>
 
                 </div>
                 <div class="register__profile">
@@ -107,7 +97,7 @@
         
         </section>
         <div class="register__button regPage">
-            <input onclick="send()" class="button__cta" type="submit" value="Enviar">
+            <input onclick="send()" class="button__cta regPage" type="submit" value="Enviar">
         </div>
 
     </form>
@@ -119,6 +109,7 @@
         <h4> &copy; Desenvolvido pelo Squad 20 - 2022</h4>
     </footer>
 
+    <script src="../scripts/api.js"></script>
     <script src="../scripts/register.js"></script>
     <script src="../js/header-hamburger.js"></script>
     <script src="../js/contraste-feature.js"></script>

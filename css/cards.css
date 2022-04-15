@@ -1,9 +1,9 @@
 .card {
   background-color: var(--color-white);
-  width: 234px;
+  width: 280px;
   height: 110px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -25,7 +25,7 @@
 }
 
 .card__title {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 .card__category {
@@ -52,32 +52,21 @@
 
 /* DESKTOP */
 @media screen and (min-width:1024px) {
+
   .card{
-    width: 350px;
+    width: 400px;
     height: fit-content;
   }
-  
-  .card__image {
-    width: 73px;
-    height: 73px;
-    border-radius: 50%;
-    padding: 1rem;
-  }
-
-  .card__info{
-    width: fit-content;
+  .card__image{
+    width: 150px;
+    height: 150px;
   }
   .card__title{
     font-size: 1.5rem;
   }
-
   .card__category{
-    width: fit-content;
     font-size: 1rem;
-  }
-  
-  .card__category {
-    font-size: 0.75rem;
+    width: fit-content;
     margin: 0.5rem 0;
     background-color: var(--color-orange);
     color: var(--color-white);
@@ -85,8 +74,8 @@
     border-radius: 5px;
     text-transform: uppercase;
   }
-  
-  .card__button {
+  .card__button{
+    font-size: 1rem;
     cursor: pointer;
     background-color: var(--color-purple);
     color: var(--color-white);
@@ -118,4 +107,8 @@
     .card__button{
       font-size: 1rem;
     }
+    .card__info{
+    width: fit-content;
+
   }
+}

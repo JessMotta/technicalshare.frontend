@@ -40,7 +40,7 @@ suas dúvidas sobre a área ou te orientar no aprendizado de novas habilidades.
 
 Desenvolvido durante o Hackathon do programa de formação da FCamara
 
-### Projeto em produção: [https://jessmotta.github.io/technicalshare.frontend/]
+### Projeto em produção: https://jessmotta.github.io/technicalshare.frontend/
 
 ---
 
@@ -56,7 +56,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 ```bash
 
 # Clone este repositório
-$ git clone git@github.com:luanaggoncalves/technicalshare.frontend.git
+$ git clone https://github.com/JessMotta/technicalshare.frontend.git
 
 # Abra o terminal e entre na pasta
 $ cd ./technicalshare.frontend
